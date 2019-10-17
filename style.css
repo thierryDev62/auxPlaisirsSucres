@@ -1,0 +1,70 @@
+/************************************************
+* CSS - Aux Plaisirs Sucrés                     *
+* Par Brouet Thierry                            *
+* Stage en entreprise : 14/10/2019 - 29/11/2019 *
+* Dans le cadre de la formation AFPA :          *
+* Développeur web & web mobile                  *
+************************************************/
+
+body {
+    background: url('images/background.jpg') no-repeat fixed;
+    font-family: 'Kalam', Arial, Helvetica, sans-serif;
+    color: #6f665f !important;
+}
+
+
+/* Container avec la même couleur de fond que le logo */
+
+.container {
+    background-color: #f9f9f9 !important;
+}
+
+
+/* Augmente la taille de la police du menu */
+
+.navbar a {
+    font-size: 1.5em;
+}
+
+
+/* Augmente la taille de la police du bouton dropdown */
+
+.dropdown button {
+    font-size: 1.5em;
+}
+
+
+/* Opacité des images du caroussel au passage de la souris */
+
+.carousel-inner img:hover {
+    opacity: 0.9;
+}
+
+
+/* Ombre sur le texte si besoin est */
+
+.ombre-texte {
+    text-shadow: 2px 2px 1px #aaa;
+}
+
+
+/* Opacité au passage de la souris sur les liens du footer */
+
+ul a:hover {
+    opacity: 0.8;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+    body {
+        background-image: none !important;
+        /* Pas de background pour les petites résolutions*/
+    }
+    .container {
+        width: 100% !important;
+        /* Force le container à prendre toute la largeur*/
+        max-width: none;
+    }
+}
