@@ -31,16 +31,9 @@ p {
 }
 
 
-/* Augmente la taille de la police du menu */
-
-.navbar a {
-    font-size: 1.5em;
-}
-
-
 /* Augmente la taille de la police du bouton dropdown */
 
-.dropdown button {
+.navbar button {
     font-size: 1.5em;
 }
 
