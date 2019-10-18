@@ -33,7 +33,7 @@ p {
 
 /* Augmente la taille de la police du bouton dropdown */
 
-.navbar button {
+.navbar a {
     font-size: 1.5em;
 }
 
