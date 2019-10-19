@@ -29,43 +29,50 @@
             <a href="index.html" class="text-center"><img src="images/logo.jpg" class="img-fluid rounded-circle w-75" alt="Logo du site"></a>
         </div>
         <!-- Menu -->
-        <div class="row justify-content-center pb-5">
-            <nav class="navbar navbar-light bg-light justify-content-center">
-                <form class="form-inline d-flex flex-column flex-sm-row">
-                    <button class="btn btn-outline-secondary border-0" type="button"><a href="index.html"
-                            class="text-reset text-decoration-none font-weight-bold">Accueil</a></button>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle font-weight-bold border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tarifs
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="gateaux.html">Pâtisserie</a>
-                            <a class="dropdown-item" href="anniversaire.html">Goûter Anniversaire</a>
-                            <a class="dropdown-item" href="aperitif.html">Apéritif Dinatoire</a>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline-secondary border-0" type="button"><a href="galerie.html"
-                            class="text-reset text-decoration-none font-weight-bold">Galerie</a></button>
-                    <button class="btn btn-outline-secondary border-0" type="button"><a href="parfums.html"
-                            class="text-reset text-decoration-none font-weight-bold">Parfums</a></button>
-                    <button class="btn btn-outline-secondary border-0" type="button"><a href="contact.html"
-                            class="text-reset text-decoration-none font-weight-bold">Contact</a></button>
-                </form>
+        <div class="row justify-content-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tarifs
+                            </a>
+                            <div class="dropdown-menu couleur-rose" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="gateaux.html">Pâtisserie</a>
+                                <a class="dropdown-item" href="anniversaire.html">Goûter Anniversaire</a>
+                                <a class="dropdown-item" href="aperitif.html">Apéritif Dinatoire</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galerie.html">Galerie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="parfums.html">Parfums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
 
 
     <!-- BLOC PRINCIPAL -->
-    <section class="container">
-        <div class="row">
 
-            <p>Contenu ici...</p>
-        </div>
-    </section>
+
+    <p>ici le contenu</p>
 
     <!-- FOOTER -->
-    <footer class="container">
+    <footer class="container pt-3">
 
         <!-- Affichage du logo -->
         <div class="row justify-content-center">
@@ -74,8 +81,7 @@
 
         <!-- Adresse de la boutique -->
         <div class="row text-center d-flex flex-column font-weight-bold mb-3">
-            <p>10, rue Roger Salengro</br>
-                62940 HAILLICOURT</p>
+            <p>10, rue Roger Salengro<br> 62940 HAILLICOURT</p>
         </div>
 
         <!-- 3 Blocs -->
