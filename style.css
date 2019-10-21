@@ -13,7 +13,7 @@ body {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 
@@ -34,7 +34,7 @@ p {
 /* Augmente la taille de la police du bouton dropdown */
 
 .navbar a {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 
@@ -52,9 +52,9 @@ p {
 }
 
 
-/* Zoom sur les cards */
+/* Zoom sur les cards de la rubrique "Quelques réalisations" */
 
-.card:hover {
+.zoom .card:hover {
     transform: scale(1.1);
     transition-property: transform;
     transition-duration: 0.5s;
@@ -62,10 +62,38 @@ p {
 }
 
 
-/* Opacité au passage de la souris sur les liens du footer */
+/* Liens en gras */
 
-ul a:hover {
+a {
+    font-weight: bold;
+}
+
+
+/* Opacité au passage de la souris sur les liens */
+
+a:hover {
     opacity: 0.8;
+}
+
+
+/* Couleur des badges */
+
+.badge-primary {
+    background: #6f665f;
+}
+
+
+/* Redesign des badges */
+
+.badge-pill {
+    border-radius: 1.1em;
+}
+
+
+/* Remplacement de l'icone de la puce de liste par une icone de toque de chef */
+
+.icone-toque ul {
+    list-style-image: url('images/toque-de-chef.png');
 }
 
 
