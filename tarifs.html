@@ -2,7 +2,7 @@
 <html lang="Fr">
 
 <head>
-    <title>Aux Plaisirs Sucrés - Tarifs Pâtisserie</title>
+    <title>Aux Plaisirs Sucrés - Tarifs</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,15 +39,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tarifs
-                            </a>
-                            <div class="dropdown-menu couleur-rose" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="gateaux.html">Pâtisserie</a>
-                                <a class="dropdown-item" href="anniversaire.html">Goûter Anniversaire</a>
-                                <a class="dropdown-item" href="aperitif.html">Apéritif Dinatoire</a>
-                            </div>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="tarifs.html">Tarifs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="galerie.html">Galerie</a>
@@ -67,9 +60,23 @@
 
 
     <!-- BLOC PRINCIPAL -->
-
-
     <div class="container">
+        <div class="row">
+            <div class="col form-group">
+                <label for="categorie"><h2 class="ombre-texte">Choix du tarif</h2></label>
+                <select class="form-control w-25" id="categorie">
+                    <option value="">Veuillez selectionner une catégorie</option>
+                    <option value="gateaux">Pâtisserie</option>
+                    <option value="anniversaire">Anniversaire</option>
+                    <option value="aperitif">Apéritif</option>
+
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="afficheCategorie">
         <div class="row couleur-rose py-2 p-md-3 mb-md-3">
             <div class="col">
                 <!-- Un style media pour présenter la rubrique-->
@@ -187,9 +194,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="includes/js/functions.js"></script>
 </body>
 
 </html>
