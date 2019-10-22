@@ -38,13 +38,6 @@ p {
 }
 
 
-/* Opacité des images du caroussel au passage de la souris */
-
-.carousel-inner img:hover {
-    opacity: 0.9;
-}
-
-
 /* Ombre sur le texte si besoin est */
 
 .ombre-texte {
