@@ -6,18 +6,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="L'équipe 'Aux plaisirs sucrés' vous confectionne des gâteaux sur commande, du simple entremet, au cake design, des plateaux apéritifs et mignardises.">
+    <meta name="description"
+        content="L'équipe 'Aux plaisirs sucrés' vous confectionne des gâteaux sur commande, du simple entremet, au cake design, des plateaux apéritifs et mignardises.">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <!-- CSS additionnel-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style/style.css">
 
     <!-- Icone -->
     <link rel="icon" href="favicon.ico" />
 
-    <!-- Fontes Google Kalam-->
-    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,14 +25,16 @@
 
         <!-- Affichage du logo -->
         <div class="row justify-content-center">
-            <a href="index.html" class="text-center"><img src="images/logo.jpg" class="img-fluid rounded-circle w-75" alt="Logo du site"></a>
+            <a href="index.html" class="text-center"><img src="images/logo.jpg" class="img-fluid rounded-circle w-75"
+                    alt="Logo du site"></a>
         </div>
         <!-- Menu -->
         <div class="row justify-content-center">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -62,12 +63,79 @@
     <!-- BLOC PRINCIPAL -->
 
 
-    <div class="container border">
+    <div class="container">
         <div class="row">
-            <div class="col">
-                <p>Ici le contenu de la galerie photos</p>
+            <div class="col-md-3 form-group">
+                <label for="categorie">
+                    <h2 class="ombre-texte">Choix de la galerie</h2>
+                </label>
+                <select class="form-control" id="categorie">
+                    <option value="">Selectionnez une catégorie</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="entremet">Entremet</option>
+                    <option value="gateau-pate-a-sucre">Gâteau pâte à sucre</option>
+                    <option value="layer-cake">Layer cake</option>
+                    <option value="macarons">Macarons</option>
+                    <option value="number-letter-cake">Number & letter cake</option>
+
+                </select>
             </div>
         </div>
+    </div>
+
+
+    <div class="container zoom-galerie" id="afficheCategorie">
+
+        <div class="row couleur-rose py-2 p-md-3 mb-md-3">
+            <div class="col">
+                <h2 class="ombre-texte">Galerie Cupcakes</h2>
+                Cliquez sur une des photos pour l'agrandir, ensuite cliquez en dehors pour la fermer.
+            </div>
+        </div>
+
+        <div class="row justify-content-around mb-3">
+            <a href="galerie-photos/cupcakes/cup-cake-1.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-1-thumb.jpg" alt="Photo 1 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-2.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-2-thumb.jpg" alt="Photo 2 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-3.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-3-thumb.jpg" alt="Photo 2 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+        </div>
+        <div class="row justify-content-around mb-3">
+            <a href="galerie-photos/cupcakes/cup-cake-4.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-4-thumb.jpg" alt="Photo 4 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-5.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-5-thumb.jpg" alt="Photo 5 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-6.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-6-thumb.jpg" alt="Photo 6 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+        </div>
+        <div class="row justify-content-around">
+            <a href="galerie-photos/cupcakes/cup-cake-7.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-7-thumb.jpg" alt="Photo 7 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-8.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-8-thumb.jpg" alt="Photo 8 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+            <a href="galerie-photos/cupcakes/cup-cake-9.jpg" data-toggle="lightbox" class="col-md-3"><img
+                    src="galerie-photos/cupcakes/cup-cake-9-thumb.jpg" alt="Photo 9 de cupcakes"
+                    class="img-thumbnail shadow">
+            </a>
+        </div>
+
     </div>
 
     <!-- FOOTER -->
@@ -110,20 +178,25 @@
                 <hr>
 
                 <p><b>Suivez-nous :</b>
-                    <a href="https://fr-fr.facebook.com/pages/category/Contractor/Aux-plaisirs-sucr%C3%A9s-Artisan-P%C3%A2tissier-1743285542571566/"><img src="images/facebook-gris.png" alt="logo facebook"></a>
+                    <a
+                        href="https://fr-fr.facebook.com/pages/category/Contractor/Aux-plaisirs-sucr%C3%A9s-Artisan-P%C3%A2tissier-1743285542571566/"><img
+                            src="images/facebook-gris.png" alt="logo facebook"></a>
                 </p>
 
             </div>
         </div>
     </footer>
 
+    <script src="includes/js/jquery-3.4.1.min.js"></script>
+    
+    <script src="includes/js/popper.min.js"></script>
+    
+    <script src="includes/js/bootstrap.min.js"></script>
 
+    <!-- Lightbox sur les photos -->
+    <script src="includes/js/ekko-lightbox.min.js"></script>
+    <script src="includes/js/functions.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -6,12 +6,32 @@
 * Développeur web & web mobile                  *
 ************************************************/
 
+/* Les polices de caractères */
+
+
+@font-face {
+	font-family: "Kalam";
+	src: url('../../fontes/Kalam-Regular.ttf');
+}
+@font-face {
+	font-family: "Kalam";
+	font-style: italic;
+	src: url('../../fontes/Kalam-Light.ttf');
+}
+@font-face {
+	font-family: "Kalam";
+	font-weight: bold;
+	src: url('../../fontes/Kalam-Bold.ttf');
+}
+
+/* Application de l'image de fond, de la police de caractères et de la couleur du texte */
 body {
-    background: url('images/background.jpg') no-repeat fixed;
+    background: url('../../images/background.jpg') no-repeat fixed;
     font-family: 'Kalam', Arial, Helvetica, sans-serif;
     color: #6f665f !important;
 }
 
+/* Augmente la taille de la police dans les paragraphes */
 p {
     font-size: 1.2rem;
 }
@@ -45,22 +65,20 @@ p {
 }
 
 
-/* Zoom sur les cards de la rubrique "Quelques réalisations" */
+/* Zoom sur les cards et les images de la galerie au passage de la souris */
 
-.zoom .card:hover {
+.card:hover, .zoom-galerie img:hover {
     transform: scale(1.1);
     transition-property: transform;
     transition-duration: 0.5s;
     border: 1px solid #6f665f;
 }
 
-
 /* Liens en gras */
 
 a {
     font-weight: bold;
 }
-
 
 /* Opacité au passage de la souris sur les liens */
 
@@ -69,7 +87,7 @@ a:hover {
 }
 
 
-/* Couleur des badges */
+/* Couleur des badges dans la rubrique "Tarif pâtisserie" */
 
 .badge-primary {
     background: #6f665f;
@@ -86,7 +104,7 @@ a:hover {
 /* Remplacement de l'icone de la puce de liste par une icone de toque de chef */
 
 .icone-toque ul {
-    list-style-image: url('images/toque-de-chef.png');
+    list-style-image: url('../../images/toque-de-chef.png');
 }
 
 
@@ -95,11 +113,11 @@ a:hover {
 @media (max-width: 992px) {
     body {
         background-image: none !important;
-        /* Pas de background pour les petites résolutions*/
+        /* Pas de background pour les petites résolutions */
     }
     .container {
         width: 100% !important;
-        /* Force le container à prendre toute la largeur*/
+        /* Force le container à prendre toute la largeur */
         max-width: none;
     }
 }
