@@ -74,6 +74,22 @@ p {
     border: 1px solid #6f665f;
 }
 
+/* Redesign : arrondi des photos de profil */
+
+.coin-photo {
+    border-radius: 20px;
+}
+
+/* Redesign : arrondi vignette de profil*/
+
+.coin-profil-gauche {
+    border-radius: 50px 20px;
+}
+
+.coin-profil-droit {
+    border-radius: 20px 50px;
+}
+
 /* Liens en gras */
 
 a {
