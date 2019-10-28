@@ -65,7 +65,7 @@ p {
 
 /* Zoom sur les cards et les images de la galerie au passage de la souris */
 
-.card:hover, .zoom-galerie img:hover {
+.vignette:hover, .zoom-galerie img:hover {
     transform: scale(1.1);
     transition-property: transform;
     transition-duration: 0.5s;
