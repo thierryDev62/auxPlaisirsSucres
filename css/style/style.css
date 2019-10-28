@@ -33,6 +33,11 @@ body {
     color: #6f665f !important;
 }
 
+/* Augmentation de la taille de la police de caractère dans les paragraphes */
+p {
+    font-size: 1.2em;
+}
+
 /* Container avec la même couleur de fond que le logo */
 
 .container {
