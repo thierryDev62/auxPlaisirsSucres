@@ -1,8 +1,12 @@
 $(function() {
-    // Ajax sur l'affichage des différentes catégories
-    $('#categorie').change(function() {
+    // Ajax sur l'affichage des différentes catégories avec un fondu
+    $('#categorie').change(function(){
         var temp = $('#categorie option:selected').val();
-        $('#afficheCategorie').load('includes/code/' + temp + '.html');
+        var box = $('#afficheCategorie');
+        
+        box.hide().load('includes/code/' + temp + '.html', function() {
+            box.fadeIn('750');
+        });
     });
 
     // Lightbox de la galerie

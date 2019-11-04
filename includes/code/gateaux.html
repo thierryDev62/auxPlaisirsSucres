@@ -61,17 +61,23 @@
 <script>
 
     $(function () {
-        $.getJSON('json/tarifs.json', function (data) {
-            $('#entremetSimple').html(data.tarifsPatisserie[0].entremetSimple);
-            $('#entremetPhoto').html(data.tarifsPatisserie[0].entremetPhoto);
-            $('#layerCake').html(data.tarifsPatisserie[0].layerCake);
-            $('#gateauPateASucre').html(data.tarifsPatisserie[0].gateauPateASucre);
-            $('#numberOuLetterCake').html(data.tarifsPatisserie[0].numberOuLetterCake);
-            $('#macarons').html(data.tarifsPatisserie[0].macarons);
-            $('#cupcakes').html(data.tarifsPatisserie[0].cupcakes);
-            $('#cupcakesATheme').html(data.tarifsPatisserie[0].cupcakesATheme);
-            $('#popsCakes').html(data.tarifsPatisserie[0].popsCakes);
-            $('#plateauDeMignardises').html(data.tarifsPatisserie[0].plateauDeMignardises);
+        // Tableau des id
+        let nomId = ['#entremetSimple', '#entremetPhoto', '#layerCake', '#gateauPateASucre', '#numberOuLetterCake', '#macarons', '#cupcakes', '#cupcakesATheme', '#popsCakes', '#plateauDeMignardises'];
+
+        // on récupère les valeurs dans le fichier json
+        $.getJSON("json/tarifs-patisserie.json", function (data) {
+            let tableauValeurs = []; // Déclaration de la variable du tableau
+
+            // On parcours toutes les valeurs
+            $.each(data, function (key, val) {
+                // On convertit les valeurs json en les ajoutant dans un tableau
+                tableauValeurs.push(val);
+            });
+
+            // Boucle pour l'affichage dans les différents id
+            for (let i = 0, j = 0; i < nomId.length && j < tableauValeurs.length; i++ , j++) {
+                $(nomId[i]).html(tableauValeurs[j]);
+            };
         });
     });
 
