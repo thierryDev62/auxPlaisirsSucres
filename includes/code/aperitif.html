@@ -13,7 +13,7 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Navette, à partir de 1,10€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Navette, à partir de <span id="navette"></span></span></p>
         <ul>
             <li>Crabe,</li>
             <li>Thon,</li>
@@ -24,7 +24,7 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Burger, à partir de 1,20€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Burger, à partir de <span id="miniBurger"></span></span></p>
         <ul>
             <li>Saumon / Aneth,</li>
             <li>Jambon / Emmental / Salade,</li>
@@ -36,7 +36,7 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Verrine, à partir de 1,30€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Verrine, à partir de <span id="verrine"></span></span></p>
         <ul>
             <li>Concombre / Saumon,</li>
             <li>Tomate / Chèvre,</li>
@@ -47,7 +47,7 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Feuilleté, à partir de 0,80€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Feuilleté, à partir de <span id="feuillete"></span></span></p>
         <ul>
             <li>Jambon / Fromage,</li>
             <li>Saucisse / Moutarde,</li>
@@ -58,7 +58,7 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Bouchée, à partir de 0,80€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Bouchée, à partir de <span id="bouchee"></span></span></p>
         <ul>
             <li>Poivron / Chorizo,</li>
             <li>Lardon / Oignons,</li>
@@ -70,7 +70,7 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Club Sandwich, à partir de 1,00€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Club Sandwich, à partir de <span id="clubSandwich"></span></span></p>
         <ul>
             <li>Mimolette,</li>
             <li>Surimi,</li>
@@ -83,7 +83,7 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Blinis, à partir de 0,90€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Blinis, à partir de <span id="miniBlinis"></span></span></p>
         <ul>
             <li>Saumon,</li>
             <li>Crevette,</li>
@@ -93,7 +93,7 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Wraps, à partir de 0,90€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Wraps, à partir de <span id="wraps"></span></span></p>
         <ul>
             <li>Jambon / Mimolette / Salade,</li>
             <li>Jambon de Parme / Mozarella,</li>
@@ -105,7 +105,7 @@
 
 <div class="row text-justify justify-content-around icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Quiche, à partir de 0,80€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Quiche, à partir de <span id="miniQuiche"></span></span></p>
         <ul>
             <li>Saumon / Epinard,</li>
             <li>Jambon / Fromage,</li>
@@ -114,7 +114,7 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Macarons, à partir de 1,00€</span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Macarons, à partir de <span id="macaronsAperitif"></span></span></p>
         <ul>
             <li>Saumon / Aneth,</li>
             <li>Foie Gras,</li>
@@ -122,3 +122,22 @@
         </ul>
     </div>
 </div>
+
+<script>
+
+        $(function () {
+            $.getJSON('json/tarifs.json', function (data) {
+                $('#navette').html(data.tarifsAperitif[0].navette);
+                $('#miniBurger').html(data.tarifsAperitif[0].miniBurger);
+                $('#verrine').html(data.tarifsAperitif[0].verrine);
+                $('#feuillete').html(data.tarifsAperitif[0].feuillete);
+                $('#bouchee').html(data.tarifsAperitif[0].bouchee);
+                $('#clubSandwich').html(data.tarifsAperitif[0].clubSandwich);
+                $('#miniBlinis').html(data.tarifsAperitif[0].miniBlinis);
+                $('#wraps').html(data.tarifsAperitif[0].wraps);
+                $('#miniQuiche').html(data.tarifsAperitif[0].miniQuiche);
+                $('#macaronsAperitif').html(data.tarifsAperitif[0].macaronsAperitif);
+            });
+        });
+    
+    </script>

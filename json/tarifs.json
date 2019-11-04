@@ -15,13 +15,24 @@
     ],
     "tarifsAnniversaire": [
         {
-            "anniv1" : "4€",
-            "anniv2" : "à partir de 5€"
+            "baby" : "9€",
+            "gourmand" : "12€",
+            "ultraGourmand" : "15€",
+            "ado" : "20€"
         }
     ],
     "tarifsAperitif": [
         {
-            "aperitif1": "1€"
+            "navette": "1,10€",
+            "miniBurger": "1,20€",
+            "verrine": "1,30€",
+            "feuillete": "0,80€",
+            "bouchee": "0,80€",
+            "clubSandwich": "1,00€",
+            "miniBlinis": "0,90€",
+            "wraps": "0,90€",
+            "miniQuiche": "0,80€",
+            "macaronsAperitif": "1,00€"
         }
     ]
 }
