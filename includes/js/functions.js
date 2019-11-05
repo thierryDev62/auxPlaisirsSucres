@@ -8,7 +8,7 @@ $(function() {
             return false;
         });
     });
-
+   
     // Lightbox de la galerie
     $(document).on("click", '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
