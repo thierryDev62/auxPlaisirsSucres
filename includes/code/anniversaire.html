@@ -51,12 +51,15 @@
 <script>
 
     $(function () {
-        $.getJSON('json/tarifs.json', function (data) {
-            $('#baby').html(data.tarifsAnniversaire[0].baby);
-            $('#gourmand').html(data.tarifsAnniversaire[0].gourmand);
-            $('#ultraGourmand').html(data.tarifsAnniversaire[0].ultraGourmand);
-            $('#ado').html(data.tarifsAnniversaire[0].ado);
-        });
+        let tarifsAnniversaire = {
+            "#baby": "9€",
+            "#gourmand": "12€",
+            "#ultraGourmand": "15€",
+            "#ado": "20€"
+        };
+        for (let anniversaireId in tarifsAnniversaire) {
+            $(anniversaireId).html(tarifsAnniversaire[anniversaireId]);
+        }
     });
 
 </script>

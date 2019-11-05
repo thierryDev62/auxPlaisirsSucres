@@ -125,19 +125,22 @@
 
 <script>
 
-        $(function () {
-            $.getJSON('json/tarifs.json', function (data) {
-                $('#navette').html(data.tarifsAperitif[0].navette);
-                $('#miniBurger').html(data.tarifsAperitif[0].miniBurger);
-                $('#verrine').html(data.tarifsAperitif[0].verrine);
-                $('#feuillete').html(data.tarifsAperitif[0].feuillete);
-                $('#bouchee').html(data.tarifsAperitif[0].bouchee);
-                $('#clubSandwich').html(data.tarifsAperitif[0].clubSandwich);
-                $('#miniBlinis').html(data.tarifsAperitif[0].miniBlinis);
-                $('#wraps').html(data.tarifsAperitif[0].wraps);
-                $('#miniQuiche').html(data.tarifsAperitif[0].miniQuiche);
-                $('#macaronsAperitif').html(data.tarifsAperitif[0].macaronsAperitif);
-            });
-        });
+$(function () {
+        let tarifsAperitif = {
+            "#navette": "1,10€",
+            "#miniBurger": "1,20€",
+            "#verrine": "1,30€",
+            "#feuillete": "0,80€",
+            "#bouchee": "0,80€",
+            "#clubSandwich": "1,00€",
+            "#miniBlinis": "0,90€",
+            "#wraps": "0,90€",
+            "#miniQuiche": "0,80€",
+            "#macaronsAperitif": "1,00€"
+        };
+        for (let aperitifId in tarifsAperitif) {
+            $(aperitifId).html(tarifsAperitif[aperitifId]);
+        }
+    });
     
     </script>

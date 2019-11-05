@@ -1,12 +1,47 @@
 {
-    "entremetSimple": "2,80€",
-    "entremetPhoto": "3,00€",
-    "layerCake": "à partir de 3,20€",
-    "gateauPateASucre": "à partir de 4,00€",
-    "numberOuLetterCake": "3,00€",
-    "macarons": "1,00€ pièce",
-    "cupcakes": "1,00€ pièce",
-    "cupcakesATheme": "1,50€ pièce",
-    "popsCakes": "0,60€ pièce",
-    "plateauDeMignardises": "22,50€"
+    "tarifs": [
+        {
+            "gateauId": "#entremetSimple",
+            "tarif": "2,80€"
+        },
+        {
+            "gateauId": "#entremetPhoto",
+            "tarif": "3,00€"
+        },
+        {
+            "gateauId": "#layerCake",
+            "tarif": "à partir de 3,20€"
+        },
+        {
+            "gateauId": "#gateauPateASucre",
+            "tarif": "à partir de 4,00€"
+        },
+        {
+            "gateauId": "#numberOuLetterCake",
+            "tarif": "3,00€"
+        },
+        {
+            "gateauId": "#macarons",
+            "tarif": "1,00€ pièce"
+        },
+        {
+            "gateauId": "#cupcakes",
+            "tarif": "1,00€ pièce"
+        },
+        {
+            "gateauId": "#cupcakesATheme",
+            "tarif": "1,50€ pièce"
+        },
+        {
+            "gateauId": "#popsCakes",
+            "tarif": "0,60€ pièce"
+        },
+        {
+            "gateauId": "#plateauDeMignardises",
+            "tarif": "22,50€"
+        }
+    ]
 }
+
+
+
