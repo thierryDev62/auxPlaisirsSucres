@@ -4,10 +4,12 @@ $(function() {
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">chargement...</span></div></div>');
         let temp = $('#categorie option:selected').val();
         let box = $('#afficheCategorie');
+        setTimeout(function(){
         box.hide().load('includes/code/' + temp + '.html', function() {
             box.fadeIn('750');
             return false;
         });
+        }, 500);
     });
    
     // Lightbox de la galerie
