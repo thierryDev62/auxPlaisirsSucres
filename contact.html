@@ -14,6 +14,11 @@
     <!-- CSS additionnel-->
     <link rel="stylesheet" href="css/style/style.css">
 
+    <!-- Nous chargeons les fichiers CDN de Leaflet (pour la carte). Le CSS AVANT le JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+
     <!-- Icone -->
     <link rel="icon" href="favicon.ico" />
 
@@ -84,6 +89,16 @@
                 <p>Merci de d'effectuer vos commandes 7 jours avant la date d'achat.</p>
             </div>
         </div>
+    </div>
+    <!-- Affichage de la carte -->
+    <div class="container justify-content-center">
+        <div class="row pt-3">
+            <div class="col">
+                <div id="map">
+                    <!-- Ici s'affichera la carte -->
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -135,6 +150,42 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script de l'affichage de la carte -->
+
+    <!-- Fichiers Javascript -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+    <script>
+        // On initialise la latitude et la longitude de l'adresse d'Aux Plaisirs Sucrés à Haillicourt (centre de la carte)
+        let lat = 50.4676822;
+        let lon = 2.5603700000000345;
+        let macarte = null;
+
+        // Fonction d'initialisation de la carte
+        function initMap() {
+
+            // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+            macarte = L.map('map').setView([lat, lon], 16);
+            // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                // Il est toujours bien de laisser le lien vers la source des données
+                attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                minZoom: 10,
+                maxZoom: 18
+            }).addTo(macarte);
+
+            // Nous ajoutons un marqueur
+            let marker = L.marker([lat, lon]).addTo(macarte);
+            marker.bindPopup("<h2>Aux Plaisirs Sucrés</h2><br>10, rue Roger Salengro<br>62940 Haillicourt<br>07 88 35 83 65").openPopup();
+        }
+
+        window.onload = function () {
+            // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+            initMap();
+        };
+    </script>
 
     <script src="includes/js/jquery-3.4.1.min.js"></script>
 

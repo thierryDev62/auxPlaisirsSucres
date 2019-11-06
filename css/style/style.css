@@ -117,6 +117,14 @@ a:hover {
     list-style-image: url('../../images/toque-de-chef.png');
 }
 
+/* Taille obligatoire de la carte */
+
+#map {
+    /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+    height: 400px;
+    width: 100%;
+}
+
 /* css ekko lightbox */
 
 .ekko-lightbox {
