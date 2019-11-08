@@ -48,16 +48,16 @@
     </div>
 </div>
 
+
 <script>
 
     $(function () {
-        
+
         $.getJSON('json/tarifs-anniversaire.json', function (tarifsAnniversaire) {
 
-        for (let anniversaireId in tarifsAnniversaire) {
-            $(anniversaireId).html(tarifsAnniversaire[anniversaireId]);
-        }
+            for (let anniversaireId in tarifsAnniversaire) {
+                $(anniversaireId).html(tarifsAnniversaire[anniversaireId]);
+            }
         });
     });
-
 </script>

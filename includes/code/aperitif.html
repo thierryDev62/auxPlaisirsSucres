@@ -2,7 +2,8 @@
     <div class="col">
         <!-- Un style media pour présenter la rubrique-->
         <div class="media align-items-center">
-            <img src="images/tarifs-aperitif-dinatoire.jpg" class="mr-3 zoom" alt="Image représentant la prestation apéritif dinatoire">
+            <img src="images/tarifs-aperitif-dinatoire.jpg" class="mr-3 zoom"
+                alt="Image représentant la prestation apéritif dinatoire">
             <div class="media-body">
                 <h2 class="ombre-texte">Tarifs apéritif dinatoire</h2>
                 prestation traiteur.
@@ -13,7 +14,8 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Navette, à partir de <span id="navette"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Navette, à partir de <span id="navette"></span></span>
+        </p>
         <ul>
             <li>Crabe,</li>
             <li>Thon,</li>
@@ -24,7 +26,8 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Burger, à partir de <span id="miniBurger"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Burger, à partir de <span
+                    id="miniBurger"></span></span></p>
         <ul>
             <li>Saumon / Aneth,</li>
             <li>Jambon / Emmental / Salade,</li>
@@ -36,7 +39,8 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Verrine, à partir de <span id="verrine"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Verrine, à partir de <span id="verrine"></span></span>
+        </p>
         <ul>
             <li>Concombre / Saumon,</li>
             <li>Tomate / Chèvre,</li>
@@ -47,7 +51,8 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Feuilleté, à partir de <span id="feuillete"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Feuilleté, à partir de <span
+                    id="feuillete"></span></span></p>
         <ul>
             <li>Jambon / Fromage,</li>
             <li>Saucisse / Moutarde,</li>
@@ -58,7 +63,8 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Bouchée, à partir de <span id="bouchee"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Bouchée, à partir de <span id="bouchee"></span></span>
+        </p>
         <ul>
             <li>Poivron / Chorizo,</li>
             <li>Lardon / Oignons,</li>
@@ -70,7 +76,8 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Club Sandwich, à partir de <span id="clubSandwich"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Club Sandwich, à partir de <span
+                    id="clubSandwich"></span></span></p>
         <ul>
             <li>Mimolette,</li>
             <li>Surimi,</li>
@@ -83,7 +90,8 @@
 
 <div class="row text-justify justify-content-around mb-md-3 icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Blinis, à partir de <span id="miniBlinis"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Blinis, à partir de <span
+                    id="miniBlinis"></span></span></p>
         <ul>
             <li>Saumon,</li>
             <li>Crevette,</li>
@@ -105,7 +113,8 @@
 
 <div class="row text-justify justify-content-around icone-toque">
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Mini Quiche, à partir de <span id="miniQuiche"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Mini Quiche, à partir de <span
+                    id="miniQuiche"></span></span></p>
         <ul>
             <li>Saumon / Epinard,</li>
             <li>Jambon / Fromage,</li>
@@ -114,7 +123,8 @@
         </ul>
     </div>
     <div class="col-md-4 border shadow p-3 mx-md-3">
-        <p><span class="font-weight-bold text-danger ombre-texte">Macarons, à partir de <span id="macaronsAperitif"></span></span></p>
+        <p><span class="font-weight-bold text-danger ombre-texte">Macarons, à partir de <span
+                    id="macaronsAperitif"></span></span></p>
         <ul>
             <li>Saumon / Aneth,</li>
             <li>Foie Gras,</li>
@@ -125,14 +135,15 @@
 
 <script>
 
-$(function () {
-        
+    $(function () {
+
         $.getJSON('json/tarifs-aperitif.json', function (tarifsAperitif) {
 
-        for (let aperitifId in tarifsAperitif) {
-            $(aperitifId).html(tarifsAperitif[aperitifId]);
-        }
+            for (let aperitifId in tarifsAperitif) {
+                $(aperitifId).html(tarifsAperitif[aperitifId]);
+            }
         });
+
     });
-    
-    </script>
+
+</script>
