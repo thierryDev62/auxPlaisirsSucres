@@ -24,6 +24,7 @@ $(document).ready(function () {
         }, 500);
     });
 
+    
     // Lightbox de la galerie
     $(document).on("click", '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
