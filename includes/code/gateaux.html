@@ -60,20 +60,12 @@
 
 <script>
     $(function () {
-        let tarifsGateaux = {
-            "#entremetSimple" : "2,80€",
-            "#entremetPhoto" : "3,00€",
-            "#layerCake" : "à partir de 3,20€",
-            "#gateauPateASucre" : "à partir de 4,00€",
-            "#numberOuLetterCake" : "3,00€",
-            "#macarons" : "1,00€ pièce",
-            "#cupcakes" : "1,00€ pièce",
-            "#cupcakesATheme" : "1,50€ pièce",
-            "#popsCakes" : "0,60€ pièce",
-            "#plateauDeMignardises" : "22,50€"
-        };
-        for (let gateauId in tarifsGateaux) {
-            $(gateauId).html(tarifsGateaux[gateauId]);
-        }
+
+        $.getJSON('json/tarifs-patisserie.json', function (tarifsGateaux) {
+
+            for (let gateauId in tarifsGateaux) {
+                $(gateauId).html(tarifsGateaux[gateauId]);
+            }
+        });
     });
 </script>

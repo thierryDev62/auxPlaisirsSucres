@@ -51,15 +51,13 @@
 <script>
 
     $(function () {
-        let tarifsAnniversaire = {
-            "#baby": "9€",
-            "#gourmand": "12€",
-            "#ultraGourmand": "15€",
-            "#ado": "20€"
-        };
+        
+        $.getJSON('json/tarifs-anniversaire.json', function (tarifsAnniversaire) {
+
         for (let anniversaireId in tarifsAnniversaire) {
             $(anniversaireId).html(tarifsAnniversaire[anniversaireId]);
         }
+        });
     });
 
 </script>

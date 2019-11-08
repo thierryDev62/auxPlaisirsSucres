@@ -126,21 +126,13 @@
 <script>
 
 $(function () {
-        let tarifsAperitif = {
-            "#navette": "1,10€",
-            "#miniBurger": "1,20€",
-            "#verrine": "1,30€",
-            "#feuillete": "0,80€",
-            "#bouchee": "0,80€",
-            "#clubSandwich": "1,00€",
-            "#miniBlinis": "0,90€",
-            "#wraps": "0,90€",
-            "#miniQuiche": "0,80€",
-            "#macaronsAperitif": "1,00€"
-        };
+        
+        $.getJSON('json/tarifs-aperitif.json', function (tarifsAperitif) {
+
         for (let aperitifId in tarifsAperitif) {
             $(aperitifId).html(tarifsAperitif[aperitifId]);
         }
+        });
     });
     
     </script>
