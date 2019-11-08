@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
 
     // Ajax sur l'affichage des différentes catégories avec un fondu et un spinner d'attente de chargement
     $('#categorie').change(function () {
@@ -32,6 +32,7 @@ $(function () {
         });
     });
 
+    
 });
 
 
