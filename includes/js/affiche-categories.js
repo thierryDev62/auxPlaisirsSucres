@@ -39,13 +39,13 @@ $(document).ready(function () {
 
                     switch(temp) {
                         case 'gateaux':
-                            urlJson = 'json/tarifs-patisserie.json';
+                            urlJson = 'json/tarifs-patisserie.php';
                             break;
                         case 'anniversaire':
-                            urlJson = 'json/tarifs-anniversaire.json';
+                            urlJson = 'json/tarifs-anniversaire.php';
                             break;
                         case 'aperitif':
-                            urlJson = 'json/tarifs-aperitif.json';
+                            urlJson = 'json/tarifs-aperitif.php';
                             break;
                         default:
                             return false;
@@ -59,10 +59,8 @@ $(document).ready(function () {
                             $(tarifsId).html(tarifs[tarifsId]);
                         }
                     });
-
                 });
                 /*******************************************************************************/
-
             }
         }, 500); // Fin du setTimeout()
 
