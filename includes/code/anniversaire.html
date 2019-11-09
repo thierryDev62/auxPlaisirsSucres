@@ -47,17 +47,3 @@
             <strong>Nutella&reg;</strong>, fraisier, gravity cake <strong>M&M's&reg;</strong>...).</p>
     </div>
 </div>
-
-
-<script>
-
-    $(function () {
-
-        $.getJSON('json/tarifs-anniversaire.json', function (tarifsAnniversaire) {
-
-            for (let anniversaireId in tarifsAnniversaire) {
-                $(anniversaireId).html(tarifsAnniversaire[anniversaireId]);
-            }
-        });
-    });
-</script>

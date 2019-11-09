@@ -133,17 +133,3 @@
     </div>
 </div>
 
-<script>
-
-    $(function () {
-
-        $.getJSON('json/tarifs-aperitif.json', function (tarifsAperitif) {
-
-            for (let aperitifId in tarifsAperitif) {
-                $(aperitifId).html(tarifsAperitif[aperitifId]);
-            }
-        });
-
-    });
-
-</script>
