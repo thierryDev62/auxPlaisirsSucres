@@ -39,13 +39,13 @@ $(document).ready(function () {
 
                     switch(temp) {
                         case 'gateaux':
-                            urlJson = 'json/tarifs-patisserie.php';
+                            urlJson = 'json/tarifs-patisserie.json';
                             break;
                         case 'anniversaire':
-                            urlJson = 'json/tarifs-anniversaire.php';
+                            urlJson = 'json/tarifs-anniversaire.json';
                             break;
                         case 'aperitif':
-                            urlJson = 'json/tarifs-aperitif.php';
+                            urlJson = 'json/tarifs-aperitif.json';
                             break;
                         default:
                             return false;
