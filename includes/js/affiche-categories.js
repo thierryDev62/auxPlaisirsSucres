@@ -7,7 +7,7 @@ $(document).ready(function () {
         // Affichage du spinner bootstrap
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">chargement...</span></div></div>');
         
-        let temp = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select
+        let temp = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable temp
         let box = $('#afficheCategorie'); // Variable pour initialiser le fondu
 
         // Un peu de temps pour que l'affichage ne soit pas brut
