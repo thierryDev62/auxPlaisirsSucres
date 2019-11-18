@@ -7,15 +7,15 @@ $(document).ready(function () {
         // Affichage du spinner bootstrap
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">chargement...</span></div></div>');
 
-        let ValeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable ValeurOption
+        let valeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable valeurOption
         let containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
 
-        // Un peu de ValeurOptions pour que l'affichage ne soit pas brut
+        // Un peu de valeurOptions pour que l'affichage ne soit pas brut
         setTimeout(function () {
             // Recharge la page par défaut en cas de clic sur 'Séléctionnez une catégorie'
-            if (ValeurOption == 'page-tarifs' || ValeurOption == 'page-galerie') {
+            if (valeurOption == 'page-tarifs' || valeurOption == 'page-galerie') {
 
-                if (ValeurOption == 'page-tarifs') {
+                if (valeurOption == 'page-tarifs') {
                     let url = "tarifs.html";
                     $(location).attr('href', url);
                 } else {
@@ -26,7 +26,7 @@ $(document).ready(function () {
             } else {
 
                 // Test si on choisi une catégorie dans la galerie
-                if (ValeurOption == 'cupcakes' || ValeurOption == 'entremet' || ValeurOption =='gateau-pate-a-sucre' || ValeurOption == 'layer-cake' || ValeurOption == 'macarons' || ValeurOption =='number-letter-cake') {
+                if (valeurOption == 'cupcakes' || valeurOption == 'entremet' || valeurOption =='gateau-pate-a-sucre' || valeurOption == 'layer-cake' || valeurOption == 'macarons' || valeurOption =='number-letter-cake') {
                     
                     // Chargement de la page HTML avec un fondu en fonction de l'option sélectionnée dans la galerie photo
                     containerPourFondu.hide().load('includes/code/trame-photos.html', function () {
@@ -36,7 +36,7 @@ $(document).ready(function () {
                         /******************************************************************************/
                         $(function () {
                             let urlImage = "";
-                            switch (ValeurOption) {
+                            switch (valeurOption) {
 
                                 case 'cupcakes':
                                     urlImage = "galerie-photos/cupcakes/cup-cake-";
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 } else {
 
                     // Chargement de la page HTML des différents tarifs choisis en option
-                    containerPourFondu.hide().load('includes/code/' + ValeurOption + '.html', function () {
+                    containerPourFondu.hide().load('includes/code/' + valeurOption + '.html', function () {
                         containerPourFondu.fadeIn('750');
                     });
 
@@ -82,7 +82,7 @@ $(document).ready(function () {
                     // Test de la catégorie pour l'affichage des prix avec un switch
                     let urlJson = "";
 
-                    switch (ValeurOption) {
+                    switch (valeurOption) {
                         case 'gateaux':
                             urlJson = 'json/tarifs-patisserie.json';
                             break;
