@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#categorie').change(function () {
 
         // Affichage du spinner bootstrap
-        $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">chargement...</span></div></div>');
+        $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-grow" role="status"><span class="sr-only">chargement...</span></div></div>');
 
         let valeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable valeurOption
         let containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
@@ -36,30 +36,40 @@ $(document).ready(function () {
                         /******************************************************************************/
                         $(function () {
                             let urlImage = "";
+                            let nombreImages = 9; // Nombre d'images par page
+                            let theme=""; // Va rajouter le thème dans le titre
                             switch (valeurOption) {
 
                                 case 'cupcakes':
                                     urlImage = "galerie-photos/cupcakes/cup-cake-";
+                                    theme = "sur le thème des cupcakes";
                                     break;
                                 case 'entremet':
                                     urlImage = "galerie-photos/entremet/entremet-";
+                                    theme = "sur le thème des entremets";
                                     break;
                                 case 'gateau-pate-a-sucre':
                                     urlImage = "galerie-photos/gateau-pate-a-sucre/gateau-pate-a-sucre-";
+                                    theme = "sur le thème des gâteaux à pâte à sucre";
                                     break;
                                 case 'layer-cake':
                                     urlImage = "galerie-photos/layer-cake/layer-cake-";
+                                    theme = "sur le thème des layer cakes";
                                     break;
                                 case 'macarons':
                                     urlImage = "galerie-photos/macarons/macaron-";
+                                    theme = "sur le thème des macarons";
                                     break;
                                 case 'number-letter-cake':
                                     urlImage = "galerie-photos/number-letter/number-letter-";
+                                    theme = "sur le thème des number ou letter cakes";
                                     break;
                             }
+                            $('#themePhoto').append(theme); // Affichage du thème dans le titre
+                            
                             // Boucle pour l'affichage de 9 images
-                            for (let numeroImage = 1; numeroImage <= 9; numeroImage++) {
-                                $('#afficheGaleriePhotos').append('<a href="' + urlImage + numeroImage + '.jpg" data-toggle="lightcontainerPourFondu" data-gallery="gallery" class="col-md-3"><img src="' + urlImage + numeroImage + '-thumb.jpg" alt="Photo ' + urlImage + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
+                            for (let numeroImage = 1; numeroImage <= nombreImages; numeroImage++) {
+                                $('#afficheGaleriePhotos').append('<a href="' + urlImage + numeroImage + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlImage + numeroImage + '-thumb.jpg" alt="Photo ' + urlImage + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
                             }
                         });
 
