@@ -7,15 +7,15 @@ $(document).ready(function () {
         // Affichage du spinner bootstrap
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">chargement...</span></div></div>');
 
-        let temp = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable temp
-        let box = $('#afficheCategorie'); // Variable pour initialiser le fondu
+        let ValeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable ValeurOption
+        let containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
 
-        // Un peu de temps pour que l'affichage ne soit pas brut
+        // Un peu de ValeurOptions pour que l'affichage ne soit pas brut
         setTimeout(function () {
             // Recharge la page par défaut en cas de clic sur 'Séléctionnez une catégorie'
-            if (temp == 'page-tarifs' || temp == 'page-galerie') {
+            if (ValeurOption == 'page-tarifs' || ValeurOption == 'page-galerie') {
 
-                if (temp == 'page-tarifs') {
+                if (ValeurOption == 'page-tarifs') {
                     let url = "tarifs.html";
                     $(location).attr('href', url);
                 } else {
@@ -26,17 +26,17 @@ $(document).ready(function () {
             } else {
 
                 // Test si on choisi une catégorie dans la galerie
-                if (temp == 'cupcakes' || temp == 'entremet' || temp =='gateau-pate-a-sucre' || temp == 'layer-cake' || temp == 'macarons' || temp =='number-letter-cake') {
+                if (ValeurOption == 'cupcakes' || ValeurOption == 'entremet' || ValeurOption =='gateau-pate-a-sucre' || ValeurOption == 'layer-cake' || ValeurOption == 'macarons' || ValeurOption =='number-letter-cake') {
                     
                     // Chargement de la page HTML avec un fondu en fonction de l'option sélectionnée dans la galerie photo
-                    box.hide().load('includes/code/trame-photos.html', function () {
-                        box.fadeIn('750');
+                    containerPourFondu.hide().load('includes/code/trame-photos.html', function () {
+                        containerPourFondu.fadeIn('750');
 
                         // Fonction d'affichage de la galerie photos
                         /******************************************************************************/
                         $(function () {
                             let urlImage = "";
-                            switch (temp) {
+                            switch (ValeurOption) {
 
                                 case 'cupcakes':
                                     urlImage = "galerie-photos/cupcakes/cup-cake-";
@@ -59,7 +59,7 @@ $(document).ready(function () {
                             }
                             // Boucle pour l'affichage de 9 images
                             for (let numeroImage = 1; numeroImage <= 9; numeroImage++) {
-                                $('#afficheGaleriePhotos').append('<a href="' + urlImage + numeroImage + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlImage + numeroImage + '-thumb.jpg" alt="Photo ' + urlImage + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
+                                $('#afficheGaleriePhotos').append('<a href="' + urlImage + numeroImage + '.jpg" data-toggle="lightcontainerPourFondu" data-gallery="gallery" class="col-md-3"><img src="' + urlImage + numeroImage + '-thumb.jpg" alt="Photo ' + urlImage + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
                             }
                         });
 
@@ -70,8 +70,8 @@ $(document).ready(function () {
                 } else {
 
                     // Chargement de la page HTML des différents tarifs choisis en option
-                    box.hide().load('includes/code/' + temp + '.html', function () {
-                        box.fadeIn('750');
+                    containerPourFondu.hide().load('includes/code/' + ValeurOption + '.html', function () {
+                        containerPourFondu.fadeIn('750');
                     });
 
                 }
@@ -82,7 +82,7 @@ $(document).ready(function () {
                     // Test de la catégorie pour l'affichage des prix avec un switch
                     let urlJson = "";
 
-                    switch (temp) {
+                    switch (ValeurOption) {
                         case 'gateaux':
                             urlJson = 'json/tarifs-patisserie.json';
                             break;
