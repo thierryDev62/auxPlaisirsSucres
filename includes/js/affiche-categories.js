@@ -70,9 +70,7 @@ $(function () {
                         $('#afficheGaleriePhotos').append('<a href="' + urlImage + numeroImage + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlImage + numeroImage + '-thumb.jpg" alt="Photo ' + urlImage + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
                     }
 
-
                     /******************************************************************************/
-
                 });
 
             } else {
@@ -83,7 +81,6 @@ $(function () {
 
                     // On lance les instructions qui vont chercher les tarifs
                     /******************************************************************************/
-
 
                     // Test de la catégorie pour l'affichage des prix avec un switch
                     let urlJson = "";
@@ -112,9 +109,7 @@ $(function () {
                     });
 
                     /*******************************************************************************/
-
                 });
-
             }
         }
     });
