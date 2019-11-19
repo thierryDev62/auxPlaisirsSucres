@@ -10,19 +10,19 @@
 
 @font-face {
     font-family: "Kalam";
-    src: url('../../fontes/Kalam-Regular.ttf');
+    src: url('../../fontes/Kalam-Regular.woff');
 }
 
 @font-face {
     font-family: "Kalam";
     font-style: italic;
-    src: url('../../fontes/Kalam-Light.ttf');
+    src: url('../../fontes/Kalam-Light.woff');
 }
 
 @font-face {
     font-family: "Kalam";
     font-weight: bold;
-    src: url('../../fontes/Kalam-Bold.ttf');
+    src: url('../../fontes/Kalam-Bold.woff');
 }
 
 /* Application de l'image de fond, de la police de caractères et de la couleur du texte */
