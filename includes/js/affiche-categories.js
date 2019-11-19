@@ -80,40 +80,42 @@ $(function () {
                 // Chargement de la page HTML des différents tarifs choisis en option
                 containerPourFondu.hide().load('includes/code/' + valeurOption + '.html', function () {
                     containerPourFondu.fadeIn('750');
+
+                    // On lance les instructions qui vont chercher les tarifs
+                    /******************************************************************************/
+
+
+                    // Test de la catégorie pour l'affichage des prix avec un switch
+                    let urlJson = "";
+
+                    switch (valeurOption) {
+                        case 'gateaux':
+                            urlJson = 'json/tarifs-patisserie.json';
+                            break;
+                        case 'anniversaire':
+                            urlJson = 'json/tarifs-anniversaire.json';
+                            break;
+                        case 'aperitif':
+                            urlJson = 'json/tarifs-aperitif.json';
+                            break;
+                        default:
+                            return false;
+                    };
+
+                    // Affichage des prix en fonction de la catégorie choisie
+                    $.getJSON(urlJson, function (tarifs) {
+
+                        // Boucle pour afficher chaque tarif au bon endroit
+                        for (let tarifsId in tarifs) {
+                            $(tarifsId).html(tarifs[tarifsId]);
+                        }
+                    });
+
+                    /*******************************************************************************/
+
                 });
 
             }
-            // On lance les instructions qui vont chercher les tarifs
-            /******************************************************************************/
-
-
-            // Test de la catégorie pour l'affichage des prix avec un switch
-            let urlJson = "";
-
-            switch (valeurOption) {
-                case 'gateaux':
-                    urlJson = 'json/tarifs-patisserie.json';
-                    break;
-                case 'anniversaire':
-                    urlJson = 'json/tarifs-anniversaire.json';
-                    break;
-                case 'aperitif':
-                    urlJson = 'json/tarifs-aperitif.json';
-                    break;
-                default:
-                    return false;
-            };
-
-            // Affichage des prix en fonction de la catégorie choisie
-            $.getJSON(urlJson, function (tarifs) {
-
-                // Boucle pour afficher chaque tarif au bon endroit
-                for (let tarifsId in tarifs) {
-                    $(tarifsId).html(tarifs[tarifsId]);
-                }
-            });
-
-            /*******************************************************************************/
         }
     });
 });
