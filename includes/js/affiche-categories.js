@@ -80,6 +80,7 @@ $(function () {
 
                 // Sinon on charge la page HTML des différents tarifs choisis en option
                 containerPourFondu.hide();
+                // Chainage du fondu et de la méthode de chargement
                 containerPourFondu.fadeIn("slow").load('includes/code/' + valeurOption + '.html', function () {
 
                     // On lance les instructions qui vont chercher les tarifs
@@ -100,7 +101,7 @@ $(function () {
                             break;
                     };
 
-                    // Fonction pour l'affichage des prix en fonction de la catégorie choisie
+                    // Méthode getJSON pour l'affichage des prix en fonction de la catégorie choisie
                     $.getJSON(urlJsonTarifs, function (tarifs) {
 
                         // Boucle for in pour afficher chaque tarif au bon endroit
