@@ -70,7 +70,7 @@ $(function () {
 
                     // Boucle pour effectuer l'affichage des photos où nombrePhotos représente le nombre de photos à afficher
                     for (let numeroPhoto = 1; numeroPhoto <= nombrePhotos; numeroPhoto++) {
-                        $('#afficheGaleriePhotos').append('<a href="' + urlPhoto + numeroPhoto + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlPhoto + numeroPhoto + '-thumb.jpg" alt="Photo ' + urlPhoto + ' de cupcakes" class="img-thumbnail shadow w-25 mb-3"></a>');
+                        $('#afficheGaleriePhotos').append('<a href="' + urlPhoto + numeroPhoto + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlPhoto + numeroPhoto + '-thumb.jpg" alt="Photo ' + theme + '" class="img-thumbnail shadow w-25 mb-3"></a>');
                     }
 
                     /******************************************************************************/
