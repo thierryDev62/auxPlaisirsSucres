@@ -82,13 +82,12 @@ $(function () {
                 containerPourFondu.hide();
                 containerPourFondu.fadeIn("slow").load('includes/code/' + valeurOption + '.html', function () {
 
-
                     // On lance les instructions qui vont chercher les tarifs
                     /******************************************************************************/
 
                     let urlJsonTarifs = "";
 
-                    // Test de la catégorie pour l'affichage des prix avec un switch
+                    // Test de la catégorie pour l'affichage des prix (dans un fichier json) avec un switch
                     switch (valeurOption) {
                         case 'gateaux':
                             urlJsonTarifs = 'json/tarifs-patisserie.json';
