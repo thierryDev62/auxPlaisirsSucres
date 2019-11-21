@@ -2,7 +2,7 @@ $(function () {
 
     // Instructions en Ajax pour effectuer l'affichage des différentes catégories (tarifs et galerie photos) avec un fondu et un spinner d'attente de chargement
 
-    $('#categorie').change(function () { // Fonction majeure pour la sélection d'une option
+    $('#categorie').change(function () { // Fonction majeure pour la sélection d'une option avec la méthode .change()
 
         // Affichage du spinner bootstrap au cas où la réponse AJAX se fait attendre
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-grow" role="status"><span class="sr-only">chargement...</span></div></div>');
