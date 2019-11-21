@@ -27,8 +27,9 @@ $(function () {
             if (valeurOption == 'cupcakes' || valeurOption == 'entremet' || valeurOption == 'gateau-pate-a-sucre' || valeurOption == 'layer-cake' || valeurOption == 'macarons' || valeurOption == 'number-letter-cake') {
 
                 // Chargement de la page HTML avec un fondu en fonction de l'option sélectionnée dans la galerie photo
-                containerPourFondu.hide().load('includes/code/trame-photos.html', function () {
-                    containerPourFondu.fadeIn('750');
+                containerPourFondu.hide();
+                containerPourFondu.fadeIn('slow').load('includes/code/trame-photos.html', function () {
+
 
                     // Instructions d'affichage de la galerie photos
                     /******************************************************************************/
@@ -78,12 +79,13 @@ $(function () {
             } else {
 
                 // Sinon on charge la page HTML des différents tarifs choisis en option
-                containerPourFondu.hide().load('includes/code/' + valeurOption + '.html', function () {
-                    containerPourFondu.fadeIn('750');
+                containerPourFondu.hide();
+                containerPourFondu.fadeIn("slow").load('includes/code/' + valeurOption + '.html', function () {
+
 
                     // On lance les instructions qui vont chercher les tarifs
                     /******************************************************************************/
-                    
+
                     let urlJsonTarifs = "";
 
                     // Test de la catégorie pour l'affichage des prix avec un switch
