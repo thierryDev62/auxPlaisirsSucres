@@ -13,11 +13,13 @@ $(function () {
         // Recharge la page par défaut tarifs.html ou galerie.html en cas de clic sur 'Séléctionnez une catégorie'
         if (valeurOption == 'page-tarifs' || valeurOption == 'page-galerie') {
 
+            let urlDefaut = '';
+
             if (valeurOption == 'page-tarifs') {
-                let urlDefaut = "tarifs.html";
+                urlDefaut = "tarifs.html";
                 $(location).attr('href', urlDefaut);
             } else {
-                let urlDefaut = "galerie.html";
+                urlDefaut = "galerie.html";
                 $(location).attr('href', urlDefaut);
             }
 
@@ -29,7 +31,6 @@ $(function () {
                 // Chargement de la page HTML avec un fondu en fonction de l'option sélectionnée dans la galerie photo
                 containerPourFondu.hide();
                 containerPourFondu.fadeIn('slow').load('includes/code/trame-photos.html', function () {
-
 
                     // Instructions d'affichage de la galerie photos
                     /******************************************************************************/
