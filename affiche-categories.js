@@ -9,11 +9,13 @@ $(function () {
 
         var valeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable valeurOption
         var containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
-        var urlDefaut = "";
+        
         
         // Recharge la page par défaut tarifs.html ou galerie.html en cas de clic sur 'Séléctionnez une catégorie'
         if (valeurOption == 'page-tarifs' || valeurOption == 'page-galerie') {
             
+            var urlDefaut = ""; // Initialisation de l'url par défaut
+
             if (valeurOption == 'page-tarifs') {
                 urlDefaut = "tarifs.html";
                 $(location).attr('href', urlDefaut);
