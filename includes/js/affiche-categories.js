@@ -7,17 +7,19 @@ $(function () {
         // Affichage du spinner bootstrap au cas où la réponse AJAX se fait attendre
         $('#afficheCategorie').html('<div class="row justify-content-center"><div class="spinner-grow" role="status"><span class="sr-only">chargement...</span></div></div>');
 
-        let valeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable valeurOption
-        let containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
-
+        var valeurOption = $('#categorie option:selected').val(); // On récupère la valeur de l'option du select dans la variable valeurOption
+        var containerPourFondu = $('#afficheCategorie'); // Variable pour initialiser le fondu
+        
         // Recharge la page par défaut tarifs.html ou galerie.html en cas de clic sur 'Séléctionnez une catégorie'
         if (valeurOption == 'page-tarifs' || valeurOption == 'page-galerie') {
+            
+            var urlDefaut = ""; // Initialisation de l'url par défaut
 
             if (valeurOption == 'page-tarifs') {
-                let urlDefaut = "tarifs.html";
+                urlDefaut = "tarifs.html";
                 $(location).attr('href', urlDefaut);
             } else {
-                let urlDefaut = "galerie.html";
+                urlDefaut = "galerie.html";
                 $(location).attr('href', urlDefaut);
             }
 
@@ -30,13 +32,12 @@ $(function () {
                 containerPourFondu.hide();
                 containerPourFondu.fadeIn('slow').load('includes/code/trame-photos.html', function () {
 
-
                     // Instructions d'affichage de la galerie photos
                     /******************************************************************************/
 
-                    let urlPhoto = "";
-                    let nombrePhotos = 9; // Nombre de photos par page
-                    let theme = ""; // Va rajouter le thème dans le titre
+                    var urlPhoto = "";
+                    var nombrePhotos = 9; // Nombre de photos par page
+                    var theme = ""; // Va rajouter le thème dans le titre
 
                     // Test du type de l'option choisie avec un switch pour affichage des photos
                     switch (valeurOption) {
@@ -69,7 +70,7 @@ $(function () {
                     $('#themePhoto').append(theme); // Affichage du thème dans le titre
 
                     // Boucle pour effectuer l'affichage des photos où nombrePhotos représente le nombre de photos à afficher
-                    for (let numeroPhoto = 1; numeroPhoto <= nombrePhotos; numeroPhoto++) {
+                    for (var numeroPhoto = 1; numeroPhoto <= nombrePhotos; numeroPhoto++) {
                         $('#afficheGaleriePhotos').append('<a href="' + urlPhoto + numeroPhoto + '.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3"><img src="' + urlPhoto + numeroPhoto + '-thumb.jpg" alt="Photo ' + theme + '" class="img-thumbnail shadow w-25 mb-3"></a>');
                     }
 
@@ -86,7 +87,7 @@ $(function () {
                     // On lance les instructions qui vont chercher les tarifs
                     /******************************************************************************/
 
-                    let urlJsonTarifs = "";
+                    var urlJsonTarifs = "";
 
                     // Test de la catégorie pour l'affichage des prix (dans un fichier json) avec un switch
                     switch (valeurOption) {
@@ -105,7 +106,7 @@ $(function () {
                     $.getJSON(urlJsonTarifs, function (tarifs) {
 
                         // Boucle for in pour afficher chaque tarif au bon endroit
-                        for (let tarifsId in tarifs) {
+                        for (var tarifsId in tarifs) {
                             $(tarifsId).html(tarifs[tarifsId]);
                         }
                     });

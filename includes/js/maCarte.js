@@ -1,9 +1,9 @@
 // Script d'affichage de la carte sur contact.html
 
 // On initialise la latitude et la longitude de l'adresse d'Aux Plaisirs Sucrés à Haillicourt (centre de la carte)
-let lat = 50.4676822;
-let lon = 2.5603700000000345;
-let macarte = null;
+var lat = 50.4676822;
+var lon = 2.5603700000000345;
+var macarte = null;
 
 // Fonction d'initialisation de la carte
 function initMap() {
@@ -19,7 +19,7 @@ function initMap() {
     }).addTo(macarte);
 
     // Nous ajoutons un marqueur
-    let marker = L.marker([lat, lon]).addTo(macarte);
+    var marker = L.marker([lat, lon]).addTo(macarte);
     marker.bindPopup("<h3>Aux Plaisirs Sucrés</h3><br>10, rue Roger Salengro<br>62940 Haillicourt<br>07 88 35 83 65").openPopup();
 }
 
