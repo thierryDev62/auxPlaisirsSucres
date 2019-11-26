@@ -253,7 +253,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
                     <p class="ombre-texte">Appelez-nous</p>
                 </div>
                 <hr>
-                <p><b>Téléphone :</b> 07 88 35 83 65</p>
+                <p><span class="font-weight-bold">Téléphone :</span> 07 88 35 83 65</p>
             </div>
             <div class="col-sm-4 col-lg-3 border shadow rounded p-3">
                 <div class="h3 text-center">
@@ -272,7 +272,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
                 </div>
                 <hr>
 
-                <p><b>Suivez-nous :</b>
+                <p><span class="font-weight-bold">Suivez-nous :</span>
                     <a
                         href="https://fr-fr.facebook.com/pages/category/Contractor/Aux-plaisirs-sucr%C3%A9s-Artisan-P%C3%A2tissier-1743285542571566/"><img
                             src="images/facebook-gris.png" alt="logo facebook"></a>
@@ -282,7 +282,6 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
     </footer>
 
     <!-- Modal qui sommes-nous -->
-
     <div id="modalQui">
         <div class="container bg-white border-dark shadow rounded mt-5">
             <div class="row">
@@ -290,7 +289,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
                     <p id="fermerModalQui" class="float-right mt-1 font-weight-bold">Fermer</p>
                 </div>
             </div>
-            <div class="row text-center couleur-rose">
+            <div class="row text-center couleur-rose pt-3">
                 <div class="col">
                     <p><img src="images/la-dream-team.jpg" class="img-fluid border border-white shadow rounded"
                             alt="Photo de toute l'équipe de 'Aux Plaisirs Sucrés'"></p>
@@ -363,28 +362,9 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
 
     <script src="includes/js/bootstrap.min.js"></script>
 
-    <script>
-        $(function () {
-
-            $('#qui').on('click', function () {
-                $('#modalQui').fadeIn('slow');
-            })
-
-            $('#fermerModalQui').on('click', function(){
-                $('#modalQui').fadeOut('slow');
-            })
-
-            $('#mentions').on('click', function () {
-                $('#modalMentions').fadeIn('slow');
-            })
-
-            $('#fermerModalMentions').on('click', function () {
-                $('#modalMentions').fadeOut('slow');
-            })
-
-        });
-
-
+    <!-- Script JQuery pour afficher les modals-->
+    <script src="includes/js/affiche-modal.js"></script>
+    
     </script>
 </body>
 
