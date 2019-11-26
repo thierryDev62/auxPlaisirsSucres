@@ -69,15 +69,6 @@
                     <h2 class="ombre-texte">Choix du tarif</h2>
                 </label>
 
-                <!--<select class="form-control" id="categorie">
-                    <option selected disabled value="page-tarifs">--Selectionnez une catégorie--</option>
-                    <option value="gateaux">Pâtisserie</option>
-                    <option value="anniversaire">Anniversaire</option>
-                    <option value="aperitif">Apéritif</option>
-                </select>-->
-
-                <!-- Essai dropdwon -->
-
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,10 +80,6 @@
                         <li class="dropdown-item" id="aperitif">Apéritif</li>
                     </ul>
                 </div>
-
-                <!-- *************** -->
-
-
 
             </div>
         </div>
@@ -243,51 +230,6 @@
 
     <script async src="includes/js/affiche-categories.js"></script>
 
-    <script>
-
-        /*$('.dropdown-menu li').on('click', function () {
-            var valeurOption = $(this).attr('id');
-
-            var containerPourFondu = $('#afficheCategorie');
-
-            // Sinon on charge la page HTML des différents tarifs choisis en option
-            containerPourFondu.hide();
-            // Chainage du fondu et de la méthode de chargement
-            containerPourFondu.fadeIn("slow").load('includes/code/' + valeurOption + '.html', function () {
-
-                // On lance les instructions qui vont chercher les tarifs
-                /
-
-                var urlJsonTarifs = "";
-
-                // Test de la catégorie pour l'affichage des prix (dans un fichier json) avec un switch
-                switch (valeurOption) {
-                    case 'gateaux':
-                        urlJsonTarifs = 'json/tarifs-patisserie.json';
-                        break;
-                    case 'anniversaire':
-                        urlJsonTarifs = 'json/tarifs-anniversaire.json';
-                        break;
-                    case 'aperitif':
-                        urlJsonTarifs = 'json/tarifs-aperitif.json';
-                        break;
-                };
-
-                // Méthode getJSON pour l'affichage des prix en fonction de la catégorie choisie
-                $.getJSON(urlJsonTarifs, function (tarifs) {
-
-                    // Boucle for in pour afficher chaque tarif au bon endroit
-                    for (var tarifsId in tarifs) {
-                        $(tarifsId).html(tarifs[tarifsId]);
-                    }
-                });
-
-                /
-            });
-
-        })*/
-
-    </script>
 
 </body>
 
