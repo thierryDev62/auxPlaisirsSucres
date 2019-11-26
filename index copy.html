@@ -262,7 +262,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
                 <hr>
                 <ul>
                     <li><a href="qui.html" class="text-reset text-decoration-none">Qui sommes-nous ?</a></li>
-                    <li class="text-reset text-decoration-none font-weight-bold" id="mentions">Mentions légales</li>
+                    <li><a href="mentions.html" class="text-reset text-decoration-none">Mentions légales</a></li>
                     <li><a href="contact.html" class="text-reset text-decoration-none">Contactez-nous</a></li>
                 </ul>
             </div>
@@ -282,64 +282,12 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
         </div>
     </footer>
 
-    <!-- Modal Mentions légales-->
-    <div id="modalMentions">
-        <div class="container bg-white border-dark shadow rounded mt-5">
-            <div class="row">
-                <div class="col">
-                    <p id="fermerModal" class="float-right mt-1 font-weight-bold">Fermer</p>
-                </div>
-            </div>
-            <div class="row couleur-rose p-3">
-                <div class="col">
-                    <h1 class="ombre-texte">Mentions légales</h1>
-                    <h2 class="ombre-texte">L'entreprise</h2>
-                    <p><strong>Enseigne :</strong> Aux Plaisirs Sucrés<br>
-                        <strong>Forme :</strong> Société à Responsabilité Limitée au capital de 1 000 €<br>
-                        <strong>Inscription :</strong> Inscrite au Registre du Commerce et des Sociétés sous le numéro
-                        de
-                        SIRET : 849 103 999 000 17<br>
-                        <strong>Gérantes :</strong></p>
-                    <ul style="font-size: 1.2em;">
-                        <li>Mme Céline ROUSSEL</li>
-                        <li>Mme Elizabeth HARS</li>
-                    </ul>
-                    <p><strong>Siège social :</strong> Aux Plaisirs Sucrés, 10 rue Roger Salengro, 62940 HAILLICOURT<br>
-                        <strong>Téléphone :</strong> 07 88 35 83 65</p>
-                    <h2 class="ombre-texte">Editeur du site</h2>
-                    <p><strong>BROUET Thierry</strong><br> Stagiaire - Développeur web et web mobile
-                        <br> En formation à l'<strong>AFPA</strong> (Rue Léon Blum, 62800 LIEVIN)</p>
-                    <h2 class="ombre-texte">Hébergeur</h2>
-                    <p><strong>Github</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--***********************-->
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="includes/js/popper.min.js"></script>
 
     <script src="includes/js/bootstrap.min.js"></script>
-
-    <script>
-        $(function () {
-
-            $('#mentions').on('click', function () {
-                console.log('ok');
-                $('#modalMentions').show('slow');
-            })
-
-            $('#fermerModal').on('click', function () {
-                $('#modalMentions').hide('slow');
-            })
-
-        });
-
-
-    </script>
 </body>
 
 </html>

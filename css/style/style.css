@@ -34,6 +34,7 @@ body {
 }
 
 /* Augmentation de la taille de la police de caractère dans les paragraphes */
+
 p {
     font-size: 1.2em;
 }
@@ -123,6 +124,25 @@ a:hover {
     /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
     height: 400px;
     width: 100%;
+}
+
+/* Modal Mentions légales */
+
+#modalMentions {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(100, 100, 100, .8);
+    z-index: 20;
+}
+
+#mentions:hover, #fermerModal:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* css ekko lightbox */
@@ -277,7 +297,6 @@ a:hover {
         -webkit-transform: scale(1)
     }
 }
-
 
 /* MEDIA QUERIES */
 
