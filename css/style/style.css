@@ -128,7 +128,7 @@ a {
 
 /* Modal Mentions légales */
 
-#modalMentions {
+#modalMentions, #modalQui {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -141,7 +141,7 @@ a {
     z-index: 20;
 }
 
-#mentions:hover, #fermerModal:hover {
+#mentions:hover, #fermerModalMentions:hover, #qui:hover, #fermerModalQui:hover {
     color: #dc3545;
     cursor: pointer;
 }
