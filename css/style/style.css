@@ -94,10 +94,10 @@ a {
     font-weight: bold;
 }
 
-/* Opacité au passage de la souris sur les liens */
+/* couleur rouge au passage de la souris sur les liens */
 
-a:hover {
-    opacity: 0.8;
+.nav-link:hover {
+    color: #dc3545!important;
 }
 
 /* Couleur des badges dans la rubrique "Tarif pâtisserie" */
@@ -142,7 +142,7 @@ a:hover {
 }
 
 #mentions:hover, #fermerModal:hover {
-    opacity: 0.8;
+    color: #dc3545;
     cursor: pointer;
 }
 
