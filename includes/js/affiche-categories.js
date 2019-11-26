@@ -21,7 +21,6 @@ $(function () {
                 var urlPhoto = "";
                 var nombrePhotos = 9; // Nombre de photos par page
                 var theme = ""; // Va rajouter le thème dans le titre
-                console.log(valeurOption);
                 // Test du type de l'option choisie avec un switch pour affichage des photos
                 switch (valeurOption) {
 
