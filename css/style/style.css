@@ -124,6 +124,7 @@ a {
     /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
     height: 400px;
     width: 100%;
+    z-index: 1;
 }
 
 /* Modal Mentions légales et Qui sommes-nous */
