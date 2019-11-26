@@ -147,6 +147,10 @@ a {
     cursor: pointer;
 }
 
+.dropdown-menu {
+    cursor: pointer;
+}
+
 /* css ekko lightbox */
 
 .ekko-lightbox {
