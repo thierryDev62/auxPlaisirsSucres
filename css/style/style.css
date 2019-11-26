@@ -130,11 +130,15 @@ a:hover {
 
 #modalMentions {
     display: none;
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
+    box-sizing: border-box;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
     background-color: rgba(100, 100, 100, .8);
     z-index: 20;
 }

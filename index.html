@@ -284,7 +284,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
 
     <!-- Modal Mentions légales-->
     <div id="modalMentions">
-        <div class="container bg-white border-dark shadow rounded mt-5 overflow-auto">
+        <div class="container bg-white border-dark shadow rounded mt-5">
             <div class="row">
                 <div class="col">
                     <p id="fermerModal" class="float-right mt-1 font-weight-bold">Fermer</p>
@@ -330,6 +330,7 @@ Technos utilisées : HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY
             $('#mentions').on('click', function () {
                 console.log('ok');
                 $('#modalMentions').show('slow');
+                //$('html, body').css('overflow', 'hidden');
             })
 
             $('#fermerModal').on('click', function () {
