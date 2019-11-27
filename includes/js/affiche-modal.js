@@ -17,5 +17,4 @@ $(function () {
     $('#fermerModalMentions').on('click', function () {
         $('#modalMentions').fadeOut('slow');
     })
-
 });
