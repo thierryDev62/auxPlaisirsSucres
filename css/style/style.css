@@ -41,6 +41,24 @@ p {
     font-size: 1.2em;
 }
 
+/* Liens en gras */
+
+a {
+    font-weight: bold;
+}
+
+/* Augmente la taille de la police du bouton dropdown */
+
+.navbar a {
+    font-size: 1.3em;
+}
+
+/* couleur rouge au passage de la souris sur les liens */
+
+.nav-link:hover, a:hover {
+    color: #dc3545!important;
+}
+
 /* Container avec la même couleur de fond que le logo */
 
 .container {
@@ -51,12 +69,6 @@ p {
 
 .couleur-rose {
     background: #fbe1ec !important;
-}
-
-/* Augmente la taille de la police du bouton dropdown */
-
-.navbar a {
-    font-size: 1.3em;
 }
 
 /* Ombre sur le texte si besoin est */
@@ -88,18 +100,6 @@ p {
 
 .coin-profil-droit {
     border-radius: 20px 50px;
-}
-
-/* Liens en gras */
-
-a {
-    font-weight: bold;
-}
-
-/* couleur rouge au passage de la souris sur les liens */
-
-.nav-link:hover, a:hover {
-    color: #dc3545!important;
 }
 
 /* Couleur des badges dans la rubrique "Tarif pâtisserie" */
@@ -144,11 +144,14 @@ a {
     z-index: 20;
 }
 
+/* Effet sur les modals au passage de la souris */
+
 #mentions:hover, #fermerModalMentions:hover, #qui:hover, #fermerModalQui:hover {
     color: #dc3545;
     cursor: pointer;
 }
 
+/* Curseur lien sur le menu */
 .dropdown-menu {
     cursor: pointer;
 }
