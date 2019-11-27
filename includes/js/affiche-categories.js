@@ -13,7 +13,7 @@ $(function () {
 
             // Chargement de la page HTML avec un fondu en fonction de l'option sélectionnée dans la galerie photo
             containerPourFondu.hide();
-            containerPourFondu.fadeIn('slow').load('includes/code/trame-photos.html', function () {
+            containerPourFondu.fadeIn('1000').load('includes/code/trame-photos.html', function () {
 
                 // Instructions d'affichage de la galerie photos
                 /******************************************************************************/
@@ -64,7 +64,7 @@ $(function () {
             // Sinon on charge la page HTML des différents tarifs choisis en option
             containerPourFondu.hide();
             // Chainage du fondu et de la méthode de chargement
-            containerPourFondu.fadeIn("slow").load('includes/code/' + valeurOption + '.html', function () {
+            containerPourFondu.fadeIn('1000').load('includes/code/' + valeurOption + '.html', function () {
 
                 // On lance les instructions qui vont chercher les tarifs dans des fichiers JSON
                 /******************************************************************************/
