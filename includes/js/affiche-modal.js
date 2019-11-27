@@ -18,12 +18,4 @@ $(function () {
         $('#modalMentions').fadeOut('slow');
     })
 
-    $('#contact').on('click', function () {
-        $('#modalContact').fadeIn('slow');
-    })
-
-    $('#fermerModalContact').on('click', function () {
-        $('#modalContact').fadeOut('slow');
-    })
-
 });
