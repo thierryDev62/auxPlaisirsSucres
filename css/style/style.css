@@ -31,6 +31,8 @@ body {
     background: url('../../images/background.jpg') no-repeat fixed;
     font-family: 'Kalam', Arial, Helvetica, sans-serif;
     color: #6f665f !important;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Augmentation de la taille de la police de caractère dans les paragraphes */
